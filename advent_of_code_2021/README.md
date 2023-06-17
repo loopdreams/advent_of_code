@@ -13,6 +13,6 @@ I'm still learning...
 -  [Day 7 - Whale](day07-whale/src/day07_whale/core.clj)
 -  [Day 8 - Seven Segment](day08-seven-segment/src/day08_seven_segment/core.clj)
 - [Day9 - Smoke Basin](day09-smoke-basin/src/day09_smoke_basin/core.clj)
-- [Day10 - Smoke Basin](day10-syntax-scoring/src/day10_syntax_scoring/core.clj)
+- [Day10 - Syntax Scoring](day10-syntax-scoring/src/day10_syntax_scoring/core.clj)
 - [Day11 - Dumbo Octopus](day11-dumbo-octopus/src/day11_dumbo_octopus/core.clj)
 
