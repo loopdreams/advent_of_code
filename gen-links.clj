@@ -38,10 +38,10 @@
 
 (defn format-index [dirname]
   (let [title (md-title dirname)
-        links (map format-md-link
-                   (sub-dir-filenames dirname))]
+        links (sort (map format-md-link
+                         (sub-dir-filenames dirname)))]
     (str title "\n\n" (str/join links))))
-  
+
 
 (defn refresh-indexes []
   (map (fn [dir] (spit (str dir "/README.md")
