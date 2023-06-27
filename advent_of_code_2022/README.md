@@ -1,2 +1,17 @@
-# Advent of Code 2022
+# Advent Of Code 2022
 
+- [Day 06 - Tuning](day06-tuning/src/day06_tuning/core.clj)
+- [Day 15 - Beacons](day15-beacons/src/day15_beacons/core.clj)
+- [Day 01 - Calorie Counting](day01-calorie-counting/src/day01_calorie_counting/core.clj)
+- [Day 04 - Cleanup](day04-cleanup/src/day04_cleanup/core.clj)
+- [Day 03 - Rucksack](day03-rucksack/src/day03_rucksack/core.clj)
+- [Day 11 - Monkey](day11-monkey/src/day11_monkey/core.clj)
+- [Day 07 - Directory](day07-directory/src/day07_directory/core.clj)
+- [Day 14 - Caves](day14-caves/src/day14_caves/core.clj)
+- [Day 05 - Stacks](day05-stacks/src/day05_stacks/core.clj)
+- [Day 12 - Hills](day12-hills/src/day12_hills/core.clj)
+- [Day 09 - Bridge](day09-bridge/src/day09_bridge/core.clj)
+- [Day 02 - Rps](day02-rps/src/day02_rps/core.clj)
+- [Day 13 - Distress Signal](day13-distress_signal/src/day13_distress_signal/core.clj)
+- [Day 10 - Crt](day10-crt/src/day10_crt/core.clj)
+- [Day 08 - Treehouse](day08-treehouse/src/day08_treehouse/core.clj)

@@ -1,12 +1,13 @@
 (ns day01-report-repair.core
   (:require [clojure.string :as str]))
 
-
 (def sample (slurp "sample.txt"))
 (def input (slurp "input.txt"))
 
 (defn parse-input [input]
   (->> input str/split-lines (map #(Integer/parseInt %))))
+
+
 
 (defn part1 [nums]
   (reduce * (for [n nums
