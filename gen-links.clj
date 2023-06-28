@@ -1,6 +1,8 @@
-(ns user
-  (:require [babashka.fs :as fs]
-            [clojure.string :as str]))
+#!/usr/bin/env bb
+
+
+(require '[babashka.fs :as fs])
+(require '[clojure.string :as str])
 
 ;; These are just some small functions for rebuilding the Markdown index pages for each AoC year
 
@@ -47,5 +49,4 @@
                        (format-index dir)))
        aoc-dirs))
 
-(comment
-  (refresh-indexes))
+(refresh-indexes)
