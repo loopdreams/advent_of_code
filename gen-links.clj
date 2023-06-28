@@ -42,12 +42,10 @@
                          (sub-dir-filenames dirname)))]
     (str title "\n\n" (str/join links))))
 
-
 (defn refresh-indexes []
   (map (fn [dir] (spit (str dir "/README.md")
                        (format-index dir)))
        aoc-dirs))
-
 
 (comment
   (refresh-indexes))
