@@ -22,7 +22,7 @@
 (defn parse-input [input] (map parse-instruction-line (str/split-lines input)))
 
 (defn lookup-contains [bag-type bags]
-  (map first (filter (fn [[k v]] (contains? v bag-type)) bags)))
+  (map first (filter (fn [[_ v]] (contains? v bag-type)) bags)))
 
 (defn all-containers [bag-type input]
   (let [bags (parse-input input)
@@ -33,12 +33,10 @@
           (recur (flatten (map #(lookup-contains % bags) candidates))
                  (into result candidates))))))
     
-
 (comment (all-containers :shiny-gold input))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PART 2
-
 
 (defn parse-input-2 [input] (into {} (map parse-instruction-line (str/split-lines input))))
 

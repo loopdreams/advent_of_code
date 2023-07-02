@@ -6,3 +6,6 @@
 - [Day 04 - Passports](day04-passports/src/day04_passports/core.clj)
 - [Day 05 - Boarding Pass](day05-boarding-pass/src/day05_boarding_pass/core.clj)
 - [Day 06 - Customs](day06-customs/src/day06_customs/core.clj)
+- [Day 07 - Luggage](day07-luggage/src/day07_luggage/core.clj)
+- [Day 08 - Handheld](day08-handheld/src/day08_handheld/core.clj)
+- [Day 09 - Encoding Error](day09-encoding-error/src/day09_encoding_error/core.clj)
