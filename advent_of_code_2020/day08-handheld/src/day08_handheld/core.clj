@@ -44,7 +44,7 @@
            location 0]
       (if (= location target) acc
           (if (visited-indexes location)
-            (count-to-fixed-program points (pop change-queue))
+            (fix-error-and-count points (pop change-queue))
             (let [[com amount] (nth points location)
                   command (if (= location index-to-change)
                             (if (= com :nop) :jmp :nop)
