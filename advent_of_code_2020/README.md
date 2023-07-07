@@ -9,3 +9,5 @@
 - [Day 07 - Luggage](day07-luggage/src/day07_luggage/core.clj)
 - [Day 08 - Handheld](day08-handheld/src/day08_handheld/core.clj)
 - [Day 09 - Encoding Error](day09-encoding-error/src/day09_encoding_error/core.clj)
+- [Day 10 - Jolts](day10-jolts/src/day10_jolts/core.clj)
+- [Day 11 - Seating](day11-seating/src/day11_seating/core.clj)
