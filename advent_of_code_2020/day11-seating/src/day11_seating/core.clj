@@ -57,8 +57,6 @@
         (if (= next prev) (count-occupied next)
             (recur (inc n)))))))
 
-
-
 (comment (time (run-simulation input)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -11,3 +11,4 @@
 - [Day 09 - Encoding Error](day09-encoding-error/src/day09_encoding_error/core.clj)
 - [Day 10 - Jolts](day10-jolts/src/day10_jolts/core.clj)
 - [Day 11 - Seating](day11-seating/src/day11_seating/core.clj)
+- [Day 12 - Navigation](day12-navigation/src/day12_navigation/core.clj)
