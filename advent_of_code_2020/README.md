@@ -12,3 +12,6 @@
 - [Day 10 - Jolts](day10-jolts/src/day10_jolts/core.clj)
 - [Day 11 - Seating](day11-seating/src/day11_seating/core.clj)
 - [Day 12 - Navigation](day12-navigation/src/day12_navigation/core.clj)
+- [Day 13 - Bus Times](day13-bus-times/src/day13_bus_times/core.clj)
+- [Day 14 - Bitmask](day14-bitmask/src/day14_bitmask/core.clj)
+- [Day 15 - Number Recite](day15-number-recite/src/day15_number_recite/core.clj)
