@@ -19,9 +19,9 @@
 (defn count-numbers-to-n [n start]
   (loop [i (count start)
          said (init-starting-ns start)
-         num-check  (last start)]
-    (if (= i n) num-check
-        (let [[num new-said] (calculate-current i said num-check)]
+         last-queue  (last start)]
+    (if (= i n) last-queue
+        (let [[num new-said] (calculate-current i said last-queue)]
           (recur (inc i) new-said num)))))
 
 (comment
