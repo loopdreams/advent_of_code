@@ -45,7 +45,6 @@
                (map rest ms)
                (conj rotated (map first ms))))))
 
-
 (defn count-points [mp]
   (let [all-points (flatten mp)]
     (->> all-points
