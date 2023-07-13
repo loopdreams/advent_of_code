@@ -43,7 +43,7 @@
                              (partition 2)
                              (map vec)
                              (into (priority-map)))
-                        start 0)]
+                        start 0)]       ;; Set start cost to zero (and this moves point to front of map)
     (if (empty? p-queue) "Not Found"
         (let [[point curr-cost] (peek p-queue)]
           (if (= point end) curr-cost
