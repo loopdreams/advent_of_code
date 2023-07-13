@@ -15,3 +15,4 @@
 - [Day 13 - Bus Times](day13-bus-times/src/day13_bus_times/core.clj)
 - [Day 14 - Bitmask](day14-bitmask/src/day14_bitmask/core.clj)
 - [Day 15 - Number Recite](day15-number-recite/src/day15_number_recite/core.clj)
+- [Day 16 - Train Ticket](day16-train-ticket/src/day16_train_ticket/core.clj)

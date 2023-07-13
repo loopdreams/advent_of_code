@@ -12,3 +12,6 @@
 - [Day 10 - Syntax Scoring](day10-syntax-scoring/src/day10_syntax_scoring/core.clj)
 - [Day 11 - Dumbo Octopus](day11-dumbo-octopus/src/day11_dumbo_octopus/core.clj)
 - [Day 12 - Passages](day12-passages/src/day12_passages/core.clj)
+- [Day 13 - Folds](day13-folds/src/day13_folds/core.clj)
+- [Day 14 - Polymers](day14-polymers/src/day14_polymers/core.clj)
+- [Day 15 - Chiton](day15-chiton/src/day15_chiton/core.clj)
