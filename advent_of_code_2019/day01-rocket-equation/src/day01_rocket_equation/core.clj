@@ -8,8 +8,11 @@
     (parse-long line)))
 
 (defn sum-fuel-requirements [modules]
-  (apply + (for [m modules]
-             (- (int (/ m 3)) 2))))
+  (reduce (fn [acc module]
+            (+ acc
+               (- (int (/ module 3)) 2)))
+          0
+          modules))
 
 (comment
   (sum-fuel-requirements (parse-input input)))
@@ -17,15 +20,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PART 2
 
-(take-while #(> % 0) [5 4 3 2 1 0 -1 -2 -3])
-
 (defn sum-refined-fuel-requirements [modules]
-  (apply + (for [m modules
-                 :let [fuels (->> m
-                                  (iterate #(- (int (/ % 3)) 2))
-                                  (take-while #(> % 0))
-                                  rest)]]
-             (apply + fuels))))
-
-(println (sum-refined-fuel-requirements (parse-input input)))
-(sum-refined-fuel-requirements [1969])
+  (reduce (fn [acc module]
+            (+ acc
+               (->> module
+                    (iterate #(- (int (/ % 3)) 2))
+                    (take-while #(> % 0))
+                    rest
+                    (apply +))))
+          0
+          modules))
+                    
+(comment
+  (sum-refined-fuel-requirements (parse-input input)))
