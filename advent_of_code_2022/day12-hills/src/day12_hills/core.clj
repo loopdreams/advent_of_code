@@ -1,64 +1,122 @@
 (ns day12-hills.core
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [clojure.data.priority-map :refer [priority-map]]))
 
-(defn parse-to-char-coords
-  "Given an input string of a multi-line grid of single characters, returns a lazy sequence of [[x y] c] tuples of
-  [x y] coords to each character c. If the function f is provided, it transforms each value c using that function."
-  ([input] (parse-to-char-coords identity input))
-  ([f input] (->> (str/split-lines input)
-                  (map-indexed (fn [y line]
-                                 (map-indexed (fn [x c] [[x y] (f c)]) line)))
-                  (apply concat))))
+(def sample (slurp "elevations.txt"))
+(def input (slurp "input.txt"))
 
-(defn parse-to-char-coords-map
-  "Given an input string of a multi-line grid of single characters, returns a map of {[x y] c} mapping the [x y]
-  coordinates to each character c. If the function f is provided, it transforms each value c using that function."
-  ([input] (parse-to-char-coords-map identity input))
-  ([f input] (into {} (parse-to-char-coords f input))))
+(defn line-to-map [line y-val]
+  (let [xs     (range 0 (count line))
+        coords (->> y-val
+                    repeat
+                    (interleave xs)
+                    (partition 2)
+                    (map vec))]
+    (into {} (map (fn [coord val]
+                    [coord val])
+                  coords
+                  line))))
+
+(defn parse-input [input]
+  (let [lines  (str/split-lines input)
+        height (count lines)
+        vals   (for [l lines]
+                 (mapv (fn [char]
+                         (cond
+                           (= char \S) 0
+                           (= char \E) 27
+                           :else (- (int char) 96))) l))]
+    (loop [c 0
+           v vals
+           m {}]
+      (if (= c height) m
+          (recur (inc c)
+                 (rest v)
+                 (into m (line-to-map (first v) c)))))))
 
 
-(defn elevation [c]
-  (or ({\S 1, \E 26} c)
-      (- (int c) 96)))
 
-(defn filter-for-keys [value-pred coll]
-  (keep (fn [[k v]] (when (value-pred v) k)) coll))
+(def ^:private inf (Long/MAX_VALUE))
 
-(defn parse-input [starting-chars input]
-  (let [grid (parse-to-char-coords-map input)]
-    {:grid (reduce-kv #(assoc %1 %2 (elevation %3)) {} grid)
-     :starts (filter-for-keys starting-chars grid)
-     :target (first (filter-for-keys #{\E} grid))}))
-
-(parse-input #{\S} (slurp "elevations.txt"))
-
-(defn neighbors [point]
+(defn neighbours [point]
   (map (partial mapv + point) [[0 1] [0 -1] [-1 0] [1 0]]))
 
-(defn climbable? [grid from to]
-  (<= (grid to) (inc (grid from))))
+(defn valid-nbrs [point queue m]
+  (let [p-val (get m point)]
+    (->> point
+         neighbours
+         (filter queue)
+         (select-keys m)
+         (filter (fn [[_ v]] (<= v (inc p-val)))))))
 
-(defn possible-steps [grid current]
-  (->> (neighbors current)
-       (filter grid)
-       (filter (partial climbable? grid current))))
 
-(defn shortest-path [grid target start]
-  (loop [options [{:current start, :moves 0}]
-         seen #{}]
-    (let [{:keys [current moves]} (first options)]
-      (cond
-        (= current target) moves
-        (seen current) (recur (subvec options 1) seen)
-        :else (let [neighbors (possible-steps grid current)
-                    neighbor-options (map #(hash-map :current %, :moves (inc moves)) neighbors)
-                    combined-options (apply conj options neighbor-options)]
-                (when (seq combined-options)
-                  (recur (subvec (apply conj options neighbor-options) 1) (conj seen current))))))))
+(defn find-shortest-path [m start end]
+    (loop [queue (assoc (->> (repeat inf)
+                             (interleave (keys m))
+                             (partition 2)
+                             (map vec)
+                             (into (priority-map)))
+                        start 0)]
+      (if (empty? queue) "Not Found"
 
-(defn part1 [input]
-  (let [{:keys [grid starts target]} (parse-input #{\S} input)]
-    (shortest-path grid target (first starts))))
+          (let [[point curr-cost] (peek queue)]
+            (if (= point end) curr-cost
 
-(part1 (slurp "input.txt"))
-(subvec [{:current 1, :moves 0}] 1)
+                (let [nbrs (valid-nbrs point queue m)
+
+                      new-queue (reduce (fn new-queue [q [nbr _]]
+                                          (update q nbr (partial min (+ curr-cost 1))))
+                                        (pop queue)
+                                        nbrs)]
+
+                  (recur new-queue)))))))
+
+(defn part-1 [input]
+  (let [m         (parse-input input)
+        [start _] (first (filter (fn [[_ v]] (= v 0)) m))
+        [end _]   (first (filter (fn [[_ v]] (= v 27)) m))]
+    (find-shortest-path m start end)))
+
+(comment
+  (part-1 input))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PART 2
+
+
+(defn valid-nbrs-reverse [point queue m]
+  (let [p-val (get m point)]
+    (->> point
+         neighbours
+         (filter queue)
+         (select-keys m)
+         (filter (fn [[_ v]] (>= v (dec p-val))))))) ;; part 2 changed this line
+
+
+(defn find-shortest-path-reverse [m start end]
+    (loop [queue (assoc (->> (repeat inf)
+                             (interleave (keys m))
+                             (partition 2)
+                             (map vec)
+                             (into (priority-map)))
+                        start 0)]
+      (if (empty? queue) "Not Found"
+
+          (let [[point curr-cost] (peek queue)]
+            (if (= (get m point) end) curr-cost ;; part 2 changed this line
+
+                (let [nbrs (valid-nbrs-reverse point queue m)
+
+                      new-queue (reduce (fn new-queue [q [nbr _]]
+                                          (update q nbr (partial min (+ curr-cost 1))))
+                                        (pop queue)
+                                        nbrs)]
+
+                  (recur new-queue)))))))
+
+(defn part-2 [input]
+  (let [m (parse-input input)
+        [start _] (first (filter (fn [[_ v]] (= v 27)) m))]
+    (find-shortest-path-reverse m start 1)))
+
+(comment (part-2 input))
