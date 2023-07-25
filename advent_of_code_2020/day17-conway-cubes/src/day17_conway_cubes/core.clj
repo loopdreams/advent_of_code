@@ -10,7 +10,6 @@
                   :when (= type \#)]
               [pos y-val 0]))
 
-
 (defn parse-input [input]
   (into #{}
         (reduce concat
