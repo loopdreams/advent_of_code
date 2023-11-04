@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day03-how-you-slice-it/day03-how-you-slice-it}}}}

@@ -10,8 +10,8 @@ pom.xml
 pom.xml.asc
 *.jar
 *.class
-/.lein-*
-/.nrepl-port
-/.prepl-port
-/.cpcache
+*.lein-*
+*.nrepl-port
+*.prepl-port
+*.cpcache
 *.json
