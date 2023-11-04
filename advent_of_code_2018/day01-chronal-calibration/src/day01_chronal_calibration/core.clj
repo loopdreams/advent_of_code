@@ -1,4 +1,4 @@
-(ns day01-chronal-calibration
+(ns day01-chronal-calibration.core
   (:require [clojure.string :as str]))
 
 (def input (slurp "input.txt"))
