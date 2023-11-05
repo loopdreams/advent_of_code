@@ -35,8 +35,9 @@
                                       (parse-long (minute l))
                                       asleep-start))
 
-        :wakes (recur ls (assoc-in timeline
+        :wakes (recur ls (update-in timeline
                                     [g (datestamp l)]
+                                    (fnil into [])
                                     (range asleep-start (parse-long (minute l))))
                       g
                       asleep-start))
