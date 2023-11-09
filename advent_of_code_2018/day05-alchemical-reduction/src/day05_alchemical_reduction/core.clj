@@ -33,6 +33,15 @@
    (sort-by val)
    first))
 
+(defn filtered-reaction [chain letter] (-> (remove letter chain) (reactions)))
+
+(defn shortest-polymer [chain]
+  (->
+   (pmap #(filtered-reaction chain %) (map set reactive-pairs))
+   sort
+   first))
+
 (comment
-  ;;;  very long time!
-  (find-shortest-polymer input))
+;;;  very long time!
+  (find-shortest-polymer input)
+  (shortest-polymer input))

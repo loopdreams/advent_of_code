@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day06-chronal-coordinates/day06-chronal-coordinates}}}}
