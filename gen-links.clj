@@ -19,15 +19,15 @@
 (defn format-md-link [filename]
   (let [[_ num _ name] (re-find #"day(\d\d)(-)([\w-\s]+)" filename)]
     (str "- [Day "
-         num
-         " - "
-         (str/join " " (map str/capitalize (str/split name #"[-_]")))
-         "]"
+             num
+             " - "
+             (str/join " " (map str/capitalize (str/split name #"[-_]")))
+             "]"
          "("
-         filename
-         "/src/"
-         (str/replace filename #"-" "_")
-         "/core.clj)\n")))
+           filename
+           "/src/"
+           (str/replace filename #"-" "_")
+           "/core.clj)\n")))
 
 (defn md-title [dirname]
   (let [title (map str/capitalize
@@ -49,4 +49,5 @@
                        (format-index dir)))
        aoc-dirs))
 
-(refresh-indexes)
+(comment
+  (refresh-indexes))
