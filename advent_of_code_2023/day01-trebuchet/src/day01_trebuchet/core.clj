@@ -35,11 +35,10 @@
                      (re-seq
                       (re-pattern (str (str/join #"|" (map str/reverse (keys number-words))) "|\\d"))))]
     
-    (parse-long (str
-                 (or (get number-words left)
-                     left)
-                 (or (get number-words (str/reverse right))
-                     right)))))
+    (parse-long
+     (str
+      (number-words left left)
+      (number-words (str/reverse right) right)))))
 
 (comment
   (apply + (map include-number-words input)))
