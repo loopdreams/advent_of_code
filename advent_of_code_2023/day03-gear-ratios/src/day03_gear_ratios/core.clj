@@ -15,7 +15,7 @@
          idx         0]
     (if-not p result
             (cond
-              (empty? p)     (recur parts result (inc idx))
+              (= p ".") (recur parts result (inc idx))
               (parse-long p) (let [len (count p)]
                                (recur parts
                                       (update result p
@@ -42,8 +42,8 @@
         [-1 0]         [1 0]
         [-1 1]  [0 1]  [1 1]]))
 
-(defn coords-touching [m]
-  (let [symbols-at (reduce concat (vals (select-keys m ["*" "$" "#" "+" "=" "/" "&" "@" "%" "-"])))]
+(defn coords-to-check [m]
+  (let [symbols-at (reduce concat (vals (select-keys m (remove parse-long (keys m)))))]
     (set (reduce concat (map touching symbols-at)))))
 
 (defn check-touching [vals touching]
@@ -53,10 +53,10 @@
 
 (defn part-1 [input]
   (let [points           (parse-input input)
-        touching-symbols (coords-touching points)]
+        check-coords (coords-to-check points)]
     (apply +
            (map (fn [[k vs]]
-                  (let [num-touching (check-touching vs touching-symbols)]
+                  (let [num-touching (check-touching vs check-coords)]
                     (if (pos? num-touching)
                       (* (parse-long k) num-touching)
                       0)))
