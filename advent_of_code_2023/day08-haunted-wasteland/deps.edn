@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {org.clojure/math.numeric-tower {:mvn/version "0.0.5"}}
+ :aliases 
+ {:neil {:project {:name day08-haunted-wasteland/day08-haunted-wasteland}}}}
