@@ -8,3 +8,4 @@
 - [Day 06 - Wait For It](day06-wait-for-it/src/day06_wait_for_it/core.clj)
 - [Day 07 - Camel Cards](day07-camel-cards/src/day07_camel_cards/core.clj)
 - [Day 08 - Haunted Wasteland](day08-haunted-wasteland/src/day08_haunted_wasteland/core.clj)
+- [Day 09 - Mirage Maintenance](day09-mirage-maintenance/src/day09_mirage_maintenance/core.clj)
