@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day10-pipe-maze/day10-pipe-maze}}}}

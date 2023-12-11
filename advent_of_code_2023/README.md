@@ -9,3 +9,5 @@
 - [Day 07 - Camel Cards](day07-camel-cards/src/day07_camel_cards/core.clj)
 - [Day 08 - Haunted Wasteland](day08-haunted-wasteland/src/day08_haunted_wasteland/core.clj)
 - [Day 09 - Mirage Maintenance](day09-mirage-maintenance/src/day09_mirage_maintenance/core.clj)
+- [Day 10 - Pipe Maze](day10-pipe-maze/src/day10_pipe_maze/core.clj)
+- [Day 11 - Cosmic Expansion](day11-cosmic-expansion/src/day11_cosmic_expansion/core.clj)

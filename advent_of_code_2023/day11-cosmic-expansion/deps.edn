@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day11-cosmic-expansion/day11-cosmic-expansion}}}}
