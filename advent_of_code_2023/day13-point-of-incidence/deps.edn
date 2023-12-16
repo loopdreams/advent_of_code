@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day13-point-of-incidence/day13-point-of-incidence}}}}
