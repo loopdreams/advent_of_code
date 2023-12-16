@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day14-parabolic-reflector-dish/day14-parabolic-reflector-dish}}}}
