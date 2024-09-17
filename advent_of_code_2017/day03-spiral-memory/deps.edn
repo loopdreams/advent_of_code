@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day03-spiral-memory/day03-spiral-memory}}}}

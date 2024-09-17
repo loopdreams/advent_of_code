@@ -6,3 +6,4 @@
 - [Day 04 - Repose Record](day04-repose-record/src/day04_repose_record/core.clj)
 - [Day 05 - Alchemical Reduction](day05-alchemical-reduction/src/day05_alchemical_reduction/core.clj)
 - [Day 06 - Chronal Coordinates](day06-chronal-coordinates/src/day06_chronal_coordinates/core.clj)
+- [Day 07 - The Sum Of Its Parts](day07-the-sum-of-its-parts/src/day07_the_sum_of_its_parts/core.clj)

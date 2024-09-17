@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day08-registers/day08-registers}}}}

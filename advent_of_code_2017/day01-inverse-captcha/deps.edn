@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day01-inverse-captcha/day01-inverse-captcha}}}}

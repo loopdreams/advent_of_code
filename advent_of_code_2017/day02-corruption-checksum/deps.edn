@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day02-corruption-checksum/day02-corruption-checksum}}}}
