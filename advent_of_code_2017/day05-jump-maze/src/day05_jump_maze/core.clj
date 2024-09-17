@@ -1,4 +1,4 @@
-(ns day05-jump-maze.day05-jump-maze
+(ns day05-jump-maze.core
   (:require
    [clojure.string :as str]))
 

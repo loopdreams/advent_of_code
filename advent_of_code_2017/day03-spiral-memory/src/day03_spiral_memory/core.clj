@@ -1,4 +1,4 @@
-(ns day03-spiral-memory.day03-spiral-memory)
+(ns day03-spiral-memory.core)
 
 (defn taxi-distance [x y]
   (+ (abs x) (abs y)))

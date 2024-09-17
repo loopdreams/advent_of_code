@@ -1,4 +1,4 @@
-(ns day10-knot-hash.day10-knot-hash
+(ns day10-knot-hash.core
   (:require
    [clojure.string :as str]))
 

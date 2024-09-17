@@ -1,4 +1,4 @@
-(ns day06-memory-reallocation.day06-memory-reallocation)
+(ns day06-memory-reallocation.core)
 
 (def sample-blocks [0 2 7 0])
 

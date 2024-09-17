@@ -1,4 +1,4 @@
-(ns day04-high-entropy-passphrases.day04-high-entropy-passphrases
+(ns day04-high-entropy-passphrases.core
   (:require
    [clojure.string :as str]))
 

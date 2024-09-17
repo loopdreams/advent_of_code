@@ -1,4 +1,4 @@
-(ns day08-registers.day08-registers
+(ns day08-registers.core
   (:require
    [clojure.string :as str]))
 

@@ -1,4 +1,4 @@
-(ns day01-inverse-captcha.day01-inverse-captcha
+(ns day01-inverse-captcha.core
   (:require [clojure.string :as str]))
 
 (def input (str/replace (slurp "D01.txt") "\n" ""))

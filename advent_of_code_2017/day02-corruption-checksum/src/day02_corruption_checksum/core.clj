@@ -1,4 +1,4 @@
-(ns day02-corruption-checksum.day02-corruption-checksum
+(ns day02-corruption-checksum.core
   (:require
    [clojure.string :as str]))
 

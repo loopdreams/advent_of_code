@@ -1,4 +1,4 @@
-(ns day07-recursive-circus.day07-recursive-circus
+(ns day07-recursive-circus.core
   (:require
    [clojure.string :as str]))
 

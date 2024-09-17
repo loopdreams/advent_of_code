@@ -1,4 +1,4 @@
-(ns day09-stream-processing.day09-stream-processing)
+(ns day09-stream-processing.core)
 
 (def input (slurp "D09.txt"))
 
