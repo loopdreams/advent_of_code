@@ -10,3 +10,5 @@
 - [Day 08 - Registers](day08-registers/src/day08_registers/core.clj)
 - [Day 09 - Stream Processing](day09-stream-processing/src/day09_stream_processing/core.clj)
 - [Day 10 - Knot Hash](day10-knot-hash/src/day10_knot_hash/core.clj)
+- [Day 11 - Hex Ed](day11-hex-ed/src/day11_hex_ed/core.clj)
+- [Day 12 - Digital Plumber](day12-digital-plumber/src/day12_digital_plumber/core.clj)
