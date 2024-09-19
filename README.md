@@ -12,6 +12,7 @@ In `Clojure`
 - [Advent of Code 2017](advent_of_code_2017/README.md)
 
 
+
 ## Progress
 
 ### 2023
@@ -1369,44 +1370,44 @@ In `Clojure`
 
 <tr>
 <td class="org-right">11</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-right">0</td>
+<td class="org-left">*</td>
+<td class="org-left">*</td>
+<td class="org-right">2</td>
 </tr>
 
 <tr>
 <td class="org-right">12</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-right">0</td>
+<td class="org-left">*</td>
+<td class="org-left">*</td>
+<td class="org-right">2</td>
 </tr>
 
 <tr>
 <td class="org-right">13</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-right">0</td>
+<td class="org-left">*</td>
+<td class="org-left">*</td>
+<td class="org-right">2</td>
 </tr>
 
 <tr>
 <td class="org-right">14</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-right">0</td>
+<td class="org-left">*</td>
+<td class="org-left">*</td>
+<td class="org-right">2</td>
 </tr>
 
 <tr>
 <td class="org-right">15</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-right">0</td>
+<td class="org-left">*</td>
+<td class="org-left">*</td>
+<td class="org-right">2</td>
 </tr>
 
 <tr>
 <td class="org-right">16</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-right">0</td>
+<td class="org-left">*</td>
+<td class="org-left">*</td>
+<td class="org-right">2</td>
 </tr>
 
 <tr>
@@ -1475,9 +1476,9 @@ In `Clojure`
 <tbody>
 <tr>
 <td class="org-right">Total</td>
-<td class="org-left">10</td>
-<td class="org-left">10</td>
-<td class="org-right">20</td>
+<td class="org-left">16</td>
+<td class="org-left">16</td>
+<td class="org-right">32</td>
 </tr>
 </tbody>
 </table>

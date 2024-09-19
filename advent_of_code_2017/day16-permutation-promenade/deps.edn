@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps  {}
+ :aliases 
+ {:neil {:project {:name day16-permutation-promenade/day16-permutation-promenade}}}}

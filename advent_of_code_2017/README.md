@@ -12,3 +12,7 @@
 - [Day 10 - Knot Hash](day10-knot-hash/src/day10_knot_hash/core.clj)
 - [Day 11 - Hex Ed](day11-hex-ed/src/day11_hex_ed/core.clj)
 - [Day 12 - Digital Plumber](day12-digital-plumber/src/day12_digital_plumber/core.clj)
+- [Day 13 - Packet Scanners](day13-packet-scanners/src/day13_packet_scanners/core.clj)
+- [Day 14 - Disk Defrag](day14-disk-defrag/src/day14_disk_defrag/core.clj)
+- [Day 15 - Dueling Generators](day15-dueling-generators/src/day15_dueling_generators/core.clj)
+- [Day 16 - Permutation Promenade](day16-permutation-promenade/src/day16_permutation_promenade/core.clj)
